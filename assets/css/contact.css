@@ -1,0 +1,228 @@
+::-webkit-scrollbar {
+  width: 4px;
+  height: 3px;
+}
+::-webkit-scrollbar-track {
+  background-color: #181a1b;
+}
+::-webkit-scrollbar-thumb {
+  background: #378ce1;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1e73c8;
+}
+.contact-section{
+	padding: 30px 0px;
+	display: flex;
+}
+.contact-content{
+	display: flex;
+	height: 100%;
+	width: 90%;
+	margin: auto;
+	align-items: center;
+}
+.contact-info-desc{
+	font-size: 15px;
+	padding-bottom: 30px;
+}
+.contact-info-items{
+	display: flex;
+	justify-content: center;
+}
+.contact-info-items i{
+  position: relative;
+  border-radius: 100%;
+  font-size: 18px;
+  background: var(--primary-main);
+  animation: contactIconAnimation 2s ease-in-out infinite alternate;
+  height: 100px;   
+  width: 100px;
+  text-align: center;
+}
+.contact-info-items i::before{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 100px;
+	font-size: 35px;
+}
+.contact-info-items div{
+	padding: 10px 15px;
+}
+.contact-info-items span{
+	font-size: 15px;
+}
+.contact-main-content{
+	height: auto;
+}
+form{
+	margin-left: 15px;
+}
+form input,
+form textarea{
+	color: rgb(232, 230, 227);
+	transition: .5s ease;
+}
+form input{
+	padding: 20px 0px 15px 0px;
+	border: none;
+	font-size: 16px;
+	width: 100%;
+	background: transparent;
+	border-bottom: 1px solid rgb(121, 112, 99);
+}
+form textarea{
+	border: none;
+	font-size: 17px;
+	height: 100px;
+	width: 98%;
+	padding: 20px 5px 0px 0px;
+	resize: vertical;
+	background-color: transparent;
+	border-bottom: 1px solid rgb(121, 112, 99);
+}
+form input:focus, form textarea:focus{  
+	outline: none;
+	border-bottom: 1px solid rgb(27, 78, 180);
+}
+form button{
+	margin-top: 20px;
+	padding: 10px 15px;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all .4s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Poppins';
+	background: var(--primary-main);
+	color: var(--secondary-white);
+	border: none;
+}
+form button:hover{
+	background-color: #11306f;
+}
+.contact-title,
+.contact-info-title{
+	padding-left: 15px;
+}
+.contact-title h2::after{
+	content: '';
+	width: 60px;
+	height: 4px;
+	background: var(--primary-main);
+	display: block;
+}
+.contact-info{
+	height: 85vh;
+	width: 50%;
+	border-right: 10px solid var(--primary-main);
+	border-bottom: 10px solid var(--primary-main);
+	border-top: 10px solid var(--primary-main);
+	animation: blueAnimationInfo 2s ease-in-out infinite alternate;
+}
+.contact-area h2{
+	font-size: 40px;
+}
+.contact-area{
+	text-align: center;
+	flex-direction: column;
+}
+@keyframes blueAnimationContact {
+  0% {
+	border-left: 10px solid var(--primary-main);
+	border-bottom: 10px solid var(--primary-main);
+	border-top: 10px solid var(--primary-main);
+  }
+  
+  100% {
+	border-left: 10px solid #7DB4EC;
+	border-bottom: 10px solid #7DB4EC;
+	border-top: 10px solid #7DB4EC;
+  }
+}
+@keyframes blueAnimationInfoFull {
+  0% {
+	border-left: 10px solid var(--primary-main);
+	border-right: 10px solid var(--primary-main);
+	border-bottom: 10px solid var(--primary-main);
+	border-top: 10px solid var(--primary-main);
+  }
+  
+  100% {
+	border-left: 10px solid #7DB4EC;
+	border-right: 10px solid #7DB4EC;
+	border-bottom: 10px solid #7DB4EC;
+	border-top: 10px solid #7DB4EC;
+  }
+}
+@keyframes blueAnimationInfo {
+  0% {
+	border-right: 10px solid var(--primary-main);
+	border-bottom: 10px solid var(--primary-main);
+	border-top: 10px solid var(--primary-main);
+  }
+  
+  100% {
+	border-right: 10px solid #7DB4EC;
+	border-bottom: 10px solid #7DB4EC;
+	border-top: 10px solid #7DB4EC;
+  }
+}
+@keyframes contactIconAnimation {
+  0% {
+  	background: var(--primary-main);
+  }
+  
+  100% {
+  	background: #7DB4EC;
+  }
+}
+@media (max-width: 1024px) {
+	.contact{
+		width: 100%;
+		height: auto;
+		padding: 30px 0px;
+	}
+	.contact-info{
+		padding: 40px 0px 0px;
+		height: auto;
+		width: 100%;
+	}
+	.contact-area{
+		display: flex;
+		flex-direction: column;
+	}
+}
+@media (max-width: 768px) {
+	.contact{
+		width: 95%;
+	}
+}
+@media (max-width: 700px) {
+	.contact-title{
+		padding: 0;
+	}
+}
+@media (max-width: 534px) {
+	.contact-title h2{
+		font-size: xx-large;
+	}
+}
+@media (max-width: 482px) {
+	.contact-title h2 {
+	    font-size: x-large;
+	}
+}
+@media (max-width: 425px) {
+	.contact-info-items{
+		flex-direction: column;
+	}
+}
+@media (max-width: 320px) {
+	.contact-info{
+		padding-top: 40px;
+	}
+}
