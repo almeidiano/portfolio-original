@@ -1,7 +1,6 @@
 import {c, cs} from './minSelector.js';
-import allTechnologies from './allTechnologies.js';
 
-export default function listTechs() {
+export default function listTechs(allTechnologies) {
 	allTechnologies.map((item) => {
 		let technologyItem = c(".skills-section-area .skill-item").cloneNode(true);
 		
